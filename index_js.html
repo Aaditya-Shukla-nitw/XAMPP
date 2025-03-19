@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Form</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h4 id="output"></h4>
+    <h4 id="result"></h4>
+    <div class="form-container-post">
+      <h2>Registration Form (JS METHOD)</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="destination-country">Destination Country:</label>
+        <select id="destination" name="destination" required>
+          <option value="">Select a country</option>
+          <option value="United States">United States</option>
+          <option value="Canada">Canada</option>
+          <option value="India">India</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Australia">Australia</option>
+        </select>
+        <div class="btn-container">
+          <button type="reset" class="reset-btn">Reset</button>
+          <button class="visa"><a href="visa_app.html" class="link-btn">Go to Visa Application</a></button>
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+        <script>
+          document
+            .querySelector("form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault(); // Prevent form submission
+              const name = document.getElementById("name").value;
+              const destination = document.getElementById("destination").value;
+              let output = document.getElementById("output");
+              let result = document.getElementById("result");
+
+              output.innerHTML = `Name: ${name} <br> Destination Country: ${destination}`;
+              if (destination === "USA") {
+                result.innerHTML = "VISA REQUIRED FOR MOST APPLICANTS.";
+              } else if (destination === "Canada") {
+                result.innerHTML = "VISA REQUIRED UNLESS YOU HAVE AN ETA.";
+              } else if (destination === "India") {
+                result.innerHTML = "VISA REQUIRED BEFORE TRAVEL.";
+              } else if (destination === "UK") {
+                result.innerHTML = "VISA DEPENDS ON THE DURATION OF STAY.";
+              } else if (destination === "Aus") {
+                result.innerHTML = "EVISA AVAILABLE FOR ELIGIBLE TRAVELERS.";
+              } else {
+                result.innerHTML =
+                  "VISA REQUIREMENT INFORMATION NOT AVAILABLE.";
+              }
+            });
+        </script>
+      </form>
+    </div>
+  </body>
+</html>

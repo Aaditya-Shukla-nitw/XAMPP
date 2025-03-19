@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="form-container-post">
+        <h2>VISA APPLICATION (POST METHOD)</h2>
+        <form action="post_display.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="destination-country">Destination Country:</label>
+            <select id="destination" name="destination" required>
+                <option value="">Select a country</option>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="India">India</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Australia">Australia</option>
+            </select>
+            <label for="citizenship">Citizenship/Nationality:</label>
+            
+            <select id="citizenship" name="citizenship" required>
+                <option value="">Select a country</option>
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="India">India</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Aus">Australia</option>
+            </select>
+            <label for="purpose">Purpose of Travel:</label>
+            <select id="purpose" name="purpose" required>
+                <option value="">Select purpose</option>
+                <option value="travel">Travel</option>
+                <option value="education">Education</option>
+                <option value="business">Business</option>
+                <option value="government_work">Government Work</option>
+            </select>
+
+            <label for="passport">Passport:</label>
+            <input type="text" id="passport" name="passport">
+
+            <div class="btn-container">
+                <button type="reset" class="reset-btn">Reset</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

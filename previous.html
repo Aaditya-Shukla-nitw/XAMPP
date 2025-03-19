@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container-get">
+        <h2>Registration Form (GET METHOD)</h2>
+        <form action="get_display.php" method="get">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label>Gender:</label>
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="subject">Subject of Interest:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="language">Language Known:</label>
+            <input type="text" id="language" name="language" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" placeholder="dd-mm-yyyy" required>
+
+            <label for="contact">Contact No.:</label>
+            <input type="number" id="contact" name="contact" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="pin">Pin Code:</label>
+            <input type="text" id="pin" name="pin" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required> 
+
+            <div class="btn-container">
+                <button type="reset" class="reset-btn">Reset</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div> 
+    <div class="form-container-post">
+        <h2>Registration Form (POST METHOD)</h2>
+        <form action="post_display.php" method="post">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label>Gender:</label>
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="subject">Subject of Interest:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="language">Language Known:</label>
+            <input type="text" id="language" name="language" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" placeholder="dd-mm-yyyy" required>
+
+            <label for="contact">Contact No.:</label>
+            <input type="number" id="contact" name="contact" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="pin">Pin Code:</label>
+            <input type="text" id="pin" name="pin" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required> 
+
+            <div class="btn-container">
+                <button type="reset" class="reset-btn">Reset</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
